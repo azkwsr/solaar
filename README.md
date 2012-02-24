@@ -1,7 +1,7 @@
 Solaar
 ===========
 
-A Ruby gem to calculate the 24 solaar terms ("ki" in Japanese) until 2099.
+A Ruby gem to calculate the 24 solar terms ("ki" in Japanese) until 2099.
 
 Installation
 -------------
