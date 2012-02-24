@@ -49,7 +49,7 @@ Usage
       => [{:date=>"2015-03-06", :ja=>"啓蟄", :en=>"Awakening of insects"},
           {:date=>"2015-03-21", :ja=>"春分", :en=>"Vernal equinox"}]
 
-      pp solaar.calc(year: 2100, term: "春分")
+      pp solaar.calc(year: 2015, term: "春分")
       => [{:date=>"2012-03-20", :ja=>"春分", :en=>"Vernal equinox"}]
 
       pp solaar.calc(year: 2100)
