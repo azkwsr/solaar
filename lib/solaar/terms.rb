@@ -26,7 +26,7 @@ module Solaar
       {m: 11, day: 23.1189, adj: 0.242592, ja: '小雪', en: 'Minor snow'},
       {m: 12, day: 7.9152,  adj: 0.242689, ja: '大雪', en: 'Major snow'},
       {m: 12, day: 22.6587, adj: 0.242752, ja: '冬至', en: 'Winter solstice'}
-    ]
+  ]
 
   class Terms
 
