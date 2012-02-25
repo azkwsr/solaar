@@ -24,7 +24,7 @@ module Solaar
       {m: 10, day: 24.2487, adj: 0.242328, ja: '霜降', en: 'Frost descent'},
       {m: 11, day: 8.2396,  adj: 0.242469, ja: '立冬', en: 'Start of winter'},
       {m: 11, day: 23.1189, adj: 0.242592, ja: '小雪', en: 'Minor snow'},
-      {m: 12, day: 7.9152,  adj: 0.242689, ja: '大雪', en: 'Major  snow'},
+      {m: 12, day: 7.9152,  adj: 0.242689, ja: '大雪', en: 'Major snow'},
       {m: 12, day: 22.6587, adj: 0.242752, ja: '冬至', en: 'Winter solstice'}
     ]
 
