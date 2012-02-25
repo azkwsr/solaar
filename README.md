@@ -62,7 +62,7 @@ TODO
 * Write test
 
 Author
-==========
+---------
 
 azukiwasher, http://twitter.com/azukiwasher, azukiwasher AT higanworks.com
 
