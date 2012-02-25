@@ -40,8 +40,7 @@ module Solaar
       return "Unable to calculate with the given year" if opts[:year].to_i > 2099
 
       if opts.key?(:month)
-        m = opts[:month].to_i
-        s = m*2-2
+        s = opts[:month].to_i*2-2
         self.solaarterms(opts, [s, s+1])
       else
         self.solaarterms(opts, nil)
