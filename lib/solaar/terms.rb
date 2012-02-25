@@ -63,7 +63,7 @@ module Solaar
 
     def formula(opts={})
       y = @year = opts[:year]
-      opts.key?(:month) ? month = opts[:month].to_i : month = opts[:m]
+      month = opts.key?(:month) ? opts[:month].to_i : opts[:m]
 
       y = month <= 2 ? y - 1 : y
       day = opts[:day] + opts[:adj] * (y - 1900) - ((y - 1900) / 4)
