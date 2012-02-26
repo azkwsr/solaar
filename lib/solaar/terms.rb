@@ -37,7 +37,7 @@ module Solaar
     def calc(*args)
       opts = args.last.is_a?(Hash) ? args.pop : {}
       opts.merge!(year: self.year) if !opts.key?(:year)
-      return "Unable to calculate with the given year" if opts[:year].to_i > 2099
+      return "Unable to calculate with given year" if opts[:year].to_i > 2099
 
       if opts.key?(:month)
         s = opts[:month].to_i*2-2

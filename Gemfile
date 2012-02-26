@@ -1,4 +1,7 @@
 source "http://rubygems.org"
 gemspec
 
-gem 'simplecov', :require => false, :group => :test
+group :test do
+  gem 'simplecov', :require => false
+  gem 'shoulda'
+end
