@@ -16,7 +16,7 @@ Usage
     solaar = Solaar::Terms.new
 
     pp solaar.calc(year: 2012)
-    => [{:date=>"2012-01-06", :ja=>"小寒", :en=>"Minor cold"},
+    #=> [{:date=>"2012-01-06", :ja=>"小寒", :en=>"Minor cold"},
         {:date=>"2012-01-21", :ja=>"大寒", :en=>"Major cold"},
         {:date=>"2012-02-04", :ja=>"立春", :en=>"Start of spring"},
         {:date=>"2012-02-19", :ja=>"雨水", :en=>"Rain water"},
@@ -41,19 +41,19 @@ Usage
         {:date=>"2012-12-07", :ja=>"大雪", :en=>"Major  snow"},
         {:date=>"2012-12-21", :ja=>"冬至", :en=>"Winter solstice"}]
 
-      pp solaar.calc(year: 2012, month: 3)
-      => [{:date=>"2012-03-05", :ja=>"啓蟄", :en=>"Awakening of insects"},
-          {:date=>"2012-03-20", :ja=>"春分", :en=>"Vernal equinox"}]
+    pp solaar.calc(year: 2012, month: 3)
+    #=> [{:date=>"2012-03-05", :ja=>"啓蟄", :en=>"Awakening of insects"},
+        {:date=>"2012-03-20", :ja=>"春分", :en=>"Vernal equinox"}]
 
-      pp solaar.calc(year: 2015, month: 3)
-      => [{:date=>"2015-03-06", :ja=>"啓蟄", :en=>"Awakening of insects"},
-          {:date=>"2015-03-21", :ja=>"春分", :en=>"Vernal equinox"}]
+    pp solaar.calc(year: 2015, month: 3)
+    #=> [{:date=>"2015-03-06", :ja=>"啓蟄", :en=>"Awakening of insects"},
+        {:date=>"2015-03-21", :ja=>"春分", :en=>"Vernal equinox"}]
 
-      pp solaar.calc(year: 2012, term: "春分")
-      => [{:date=>"2012-03-20", :ja=>"春分", :en=>"Vernal equinox"}]
+    pp solaar.calc(year: 2012, term: "春分")
+    #=> [{:date=>"2012-03-20", :ja=>"春分", :en=>"Vernal equinox"}]
 
-      pp solaar.calc(year: 2100)
-      => "Unable to calculate with the given year"
+    pp solaar.calc(year: 2100)
+    #=> "Unable to calculate with the given year"
 
 
 Author
