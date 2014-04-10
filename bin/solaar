@@ -8,21 +8,17 @@ require_relative '../lib/solaar'
 class App < Sinatra::Base
   set :show_exceptions, :after_handler
   solaar = Solaar::Term.new
-  
-  get '/' do
-    redirect '/solaar'
-  end
 
-  get '/solaar' do
+  get '/' do
     json solaar.calc
   end
 
-  get '/solaar/:year' do
+  get '/:year' do
     year = params[:year].to_i
     json solaar.calc(year: year)
   end
 
-  get '/solaar/:year/:month_or_term' do
+  get '/:year/:month_or_term' do
     year = params[:year].to_i
     param = params[:month_or_term].to_i 
     if param == 0
