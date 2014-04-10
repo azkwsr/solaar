@@ -50,4 +50,3 @@ pkg
 
 # For Gemfile.lock
 *.gem
-Gemfile.lock
