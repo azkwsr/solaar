@@ -1,10 +1,5 @@
 # encoding: utf-8
+require 'rspec/core/rake_task'
 
-require 'rake/testtask'
-Rake::TestTask.new(:test) do |test|
-  test.libs << 'lib' << 'test'
-  test.pattern = 'test/**/test_*.rb'
-  test.verbose = true
-end
-
-task :default => :test
+RSpec::Core::RakeTask.new(:spec)
+task :default => :spec
