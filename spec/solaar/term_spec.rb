@@ -6,6 +6,10 @@ describe Solaar::Term do
   let(:record) {{ date: "2014-12-07", ja: "大雪", en: "Major snow" }}
 
   describe "#calc" do
+    it "returns a collection of terms for this year" do
+      expect(solaar.calc.first[:date]).to match /2014/
+    end
+
     it "returns a collection of terms for the given year" do
       expect(solaar.calc(year: 2014).size).to eql 24
     end
