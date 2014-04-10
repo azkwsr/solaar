@@ -34,11 +34,8 @@ module Solaar
   end
 
   class Term
-    attr_accessor :terms
-
     def initialize
       @solaarterms = Solaar::Table
-      @terms = []
     end
 
     def calc(*args)
@@ -56,16 +53,16 @@ module Solaar
         self.solaarterms(opts, nil)
       end
 
-      terms
+      @terms
     end
 
     def solaarterms(opts={}, range=nil)
+      @terms = []
       s, e = range.nil? ? [0,-1] : range
-
       if opts.key?(:term)
-        @solaarterms[s..e].each{ |t| terms << self.formula(opts.merge!(t)) if opts[:term] == t[:ja] }
+        @solaarterms[s..e].each{ |t| @terms << self.formula(opts.merge!(t)) if opts[:term] == t[:ja] }
       else
-        @solaarterms[s..e].each{ |t| terms << self.formula(opts.merge!(t)) }
+        @solaarterms[s..e].each{ |t| @terms << self.formula(opts.merge!(t)) }
       end
     end
 
