@@ -1,13 +1,17 @@
 #!/usr/bin/env ruby
 
-require_relative '../lib/solaar'
 require 'sinatra/base'
 require 'sinatra/json'
 require 'oj'
+require_relative '../lib/solaar'
 
 class App < Sinatra::Base
   set :show_exceptions, :after_handler
-  solaar = Solaar::Terms.new
+  solaar = Solaar::Term.new
+  
+  get '/' do
+    redirect '/solaar'
+  end
 
   get '/solaar' do
     json solaar.calc
