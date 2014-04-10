@@ -1,0 +1,47 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/solaar'
+require 'sinatra/base'
+require 'sinatra/json'
+require 'oj'
+
+class App < Sinatra::Base
+  set :show_exceptions, :after_handler
+  solaar = Solaar::Terms.new
+
+  get '/solaar' do
+    json solaar.calc
+  end
+
+  get '/solaar/:year' do
+    year = params[:year].to_i
+    json solaar.calc(year: year)
+  end
+
+  get '/solaar/:year/:month_or_term' do
+    year = params[:year].to_i
+    param = params[:month_or_term].to_i 
+    if param == 0
+      json solaar.calc(year: year, term: params[:month_or_term])
+    else
+      json solaar.calc(year: year, month: param)
+    end
+  end
+
+  error Sinatra::NotFound do
+    status 404
+    json({ error: "Resource not found" })
+  end
+
+  error ArgumentError do
+    status 400
+    json({ error: env['sinatra.error'].message })
+  end
+
+  error Solaar::Exception::OutOfRange do
+    status 400
+    json({ error: env['sinatra.error'].message })
+  end
+end
+
+App.run!
