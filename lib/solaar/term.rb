@@ -45,7 +45,7 @@ module Solaar
 
       y = month <= 2 ? y - 1 : y
       day = opts[:day] + opts[:adj] * (y - 1900) - ((y - 1900) / 4)
-      Hash[date: Time.new(@year, month, day).strftime("%F"), ja: opts[:ja], en: opts[:en]]
+      Hash[date: Time.new(@year, month, day).strftime("%F"), language: { ja: opts[:ja], en: opts[:en] }]
     end
 
     def year

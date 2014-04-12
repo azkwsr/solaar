@@ -3,7 +3,7 @@ require 'spec_helper'
 
 describe Solaar::Term do
   let(:solaar) { Solaar::Term.new }
-  let(:record) {{ date: "2014-12-07", ja: "大雪", en: "Major snow" }}
+  let(:record) {{ date: "2014-12-07", language: { ja: "大雪", en: "Major snow" }}}
 
   describe "#calc" do
     it "returns a collection of terms for this year" do
