@@ -1,7 +1,8 @@
 Solaar
 ==========
-
+[![Build Status](https://travis-ci.org/azukiwasher/solaar.svg?branch=master)](https://travis-ci.org/azukiwasher/solaar)
 A Ruby gem to calculate the 24 solar terms ("24節気" in Japanese) until 2099.
+
 
 Installation
 -------------
