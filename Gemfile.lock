@@ -15,7 +15,7 @@ GEM
     diff-lcs (1.2.5)
     eventmachine (1.0.3)
     multi_json (1.9.2)
-    oj (2.7.2)
+    oj (2.7.3)
     rack (1.5.2)
     rack-protection (1.5.3)
       rack
