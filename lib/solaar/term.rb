@@ -12,7 +12,7 @@ module Solaar
 
     def calc(*args)
       opts = args.last.is_a?(Hash) ? args.pop : {}
-      opts.merge!(year: self.year) if !opts.key?(:year)
+      opts.merge!(year: self.year) unless opts.key?(:year)
 
       if opts[:year].to_i > 2099 || opts[:year].to_i <= 0
         raise Exception::OutOfRange.new("Unable to calculate") 
